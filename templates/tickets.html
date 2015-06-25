@@ -1,0 +1,13 @@
+<ion-view view-title="Билет">
+    <ion-content ng-repeat="ticket in tickets | filter:id">
+        <div class="list card">
+            <div class="item">
+                <h1>Билет №{{ticket.number}}</h1>
+            </div>
+            <div class="item item-body" ng-repeat="qa in ticket.body">
+                <strong>Вопрос {{$index+1}}:</strong> {{qa.question}}
+                <br><br>
+                <strong>Ответ:</strong> {{qa.answer}}
+            </div>
+    </ion-content>
+</ion-view>
